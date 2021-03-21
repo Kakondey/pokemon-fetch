@@ -31,7 +31,7 @@ const ListPokemon = () => {
               pokemonUrl,
             }}
           >
-            <p>{pokemon.name + " " + pokemon.url}</p>
+            <p>{pokemon.name}</p>
           </Link>
         );
       })}
