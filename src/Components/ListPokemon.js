@@ -3,7 +3,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 const ListPokemon = () => {
   const [pokeList, setPokeList] = useState([]);
-  const [pokemonUrl, setpokemonUrl] = useState("sdfsdf");
   useEffect(() => {
     axios
       .get(
@@ -28,7 +27,6 @@ const ListPokemon = () => {
             key={pokemon.url.match("[0-9]+(?=/$)")[0]}
             to={{
               pathname: `/pokemon/${pokemon.url.match("[0-9]+(?=/$)")[0]}/`,
-              pokemonUrl,
             }}
           >
             <p>{pokemon.name}</p>
